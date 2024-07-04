@@ -1,4 +1,12 @@
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.navbar ul li a');
 
-function greet() {
-    console.log("Hello, world!");
-}
+    navItems.forEach(item => {
+        item.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert(`Clicked on ${item.textContent}`);
+            // You can add more functionality here based on your requirements
+        });
+    });
+});
